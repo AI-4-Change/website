@@ -1,4 +1,3 @@
-# SHSS - Website
-Website for Homestead SHSS (Sikh Honors & Service Society)
+# AI4Change Website
 
-www.shsshomestead.com
+Website for AI4Change
