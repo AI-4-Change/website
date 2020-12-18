@@ -1,0 +1,296 @@
+$pixar-body: #dcf0ef;
+$pixar-line: #8bb1c3;
+$pixar-lamp: #fdefcf;
+
+$background: #f3fbfd;
+
+$direction: rtl; 
+
+// animation
+$speed: 1s;
+$walk-range: 15;
+$start-pos: -20%;
+$end-pos: 120%;
+
+$walk-speed: $speed * $walk-range;
+$steps: 100% / $walk-range;
+$jump-start: $steps / 2;
+$jumping: $steps * 0.7;
+
+$range-pos: $end-pos - $start-pos;
+
+$range-steps: $range-pos / $walk-range;
+
+$position: left;
+$rotate: 0deg;
+
+@if $direction==rtl {
+    $position: right;
+    $rotate: 180deg;
+}
+
+body {
+    background-color: $background;
+    overflow: hidden;
+}
+
+.pixar {
+    position: absolute;
+    bottom: 40%;
+    #{$position}: -50%;
+    width: 132px;
+    margin-left: -66px;
+    text-align: center;
+    line-height: 0;
+    animation: walk $walk-speed linear infinite;
+    transform: rotateY(#{$rotate});
+
+    div {
+        display: inline-block;
+    }
+
+    .head {
+        position: relative;
+        margin-left: 35px;
+        width: 80px;
+        height: 80px;
+        margin-bottom: -24px;
+        z-index: 4;
+        animation: jump-head $speed linear infinite;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60%;
+            height: 70%;
+            border: solid 7px $pixar-line;
+            background-color: $pixar-body;
+            border-radius: 50% 0 0 50%;
+            z-index: 4;
+            transform: rotateZ(20deg)
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 18%;
+            left: -7px;
+            width: 10px;
+            height: 10px;
+            border: solid 7px $pixar-line;
+            background-color: $pixar-body;
+            border-radius: 50%;
+        }
+
+        .lamp {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 38px;
+            height: 38px;
+            margin: -23px 0 0 -15px;
+            border: solid 5px $pixar-line;
+            border-radius: 50%;
+            background-color: $pixar-lamp;
+        }
+    }
+
+    .body {
+        .arm {
+            position: relative;
+            display: block;
+            width: 5px;
+            height: 48px;
+            border-left: solid 7px $pixar-line;
+            border-right: solid 7px $pixar-line;
+            background-color: $pixar-body;
+        }
+
+        .arm-top {
+            margin-bottom: -10px;
+            transform-origin: 50% 0;
+            transform: rotateZ(30deg);
+            z-index: 3;
+            animation: jump-arm-top $speed linear infinite;
+
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: -20px;
+                left: 50%;
+                width: 16px;
+                height: 16px;
+                margin-left: -15px;
+                border: solid 7px $pixar-line;
+                border-radius: 50%;
+                background-color: $pixar-body;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -9px;
+                left: 50%;
+                width: 8px;
+                height: 8px;
+                margin-left: -4px;
+                border-radius: 50%;
+                background-color: $pixar-line;
+            }
+        }
+
+        .arm-middle {
+            transform-origin: 50% 50%;
+            transform: rotateZ(-40deg);
+            margin-bottom: -10px;
+            margin-left: -5px;
+            z-index: 2;
+            animation: jump-arm-middle $speed linear infinite;
+
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: -20px;
+                left: 50%;
+                width: 16px;
+                height: 16px;
+                margin-left: -15px;
+                border: solid 7px $pixar-line;
+                border-radius: 50%;
+                background-color: $pixar-body;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -9px;
+                left: 50%;
+                width: 8px;
+                height: 8px;
+                margin-left: -4px;
+                border-radius: 50%;
+                background-color: $pixar-line;
+            }
+        }
+
+        .arm-bottom {
+            transform-origin: 50% 100%;
+            transform: rotateZ(20deg);
+            margin-left: -5px;
+            margin-bottom: -5px;
+            z-index: 1;
+            animation: jump-arm-bottom $speed linear infinite;
+        }
+    }
+
+    .footer {
+        position: relative;
+        width: 118px;
+        height: 12px;
+        border: solid 7px $pixar-line;
+        border-radius: 16px 16px 2px 2px;
+        background-color: $pixar-body;
+        z-index: 4;
+        animation: jump-footer $speed linear infinite;
+    }
+}
+
+// jumps
+@keyframes walk {
+    @for $i from 1 through $walk-range {
+        #{(($steps * $i) + $jump-start) - $steps} {
+            bottom: 40%;
+            #{$position}: ($start-pos + ($range-steps * $i) - $range-steps);
+        }
+
+        #{(($steps * $i) + $jumping) - $steps} {
+            bottom: (30% + (40 / ($walk-range / 10)));
+            #{$position}: ($start-pos + (($range-steps / 2) + (($range-steps * $i) - $range-steps)));
+        }
+
+        #{($steps * $i)} {
+            bottom: 40%;
+            #{$position}: ($start-pos + ($range-steps * $i));
+        }
+    }
+}
+
+@keyframes jump-head {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    50% {
+        transform: rotateZ(0deg);
+    }
+
+    70% {
+        transform: rotateZ(-50deg);
+    }
+}
+
+@keyframes jump-arm-top {
+    0% {
+        transform: rotateZ(30deg);
+        margin-bottom: -10px;
+    }
+
+    50% {
+        transform: rotateZ(60deg);
+        margin-bottom: -35px;
+    }
+
+    70% {
+        transform: rotateZ(0deg);
+        margin-bottom: 0;
+    }
+}
+
+@keyframes jump-arm-middle {
+    0% {
+        transform: rotateZ(-40deg);
+        margin-bottom: -10px;
+    }
+
+    50% {
+        transform: rotateZ(-80deg);
+        margin-left: -16px;
+        margin-bottom: -30px;
+    }
+
+    70% {
+        transform: rotateZ(0deg);
+        margin-left: -5px;
+        margin-bottom: 0;
+    }
+}
+
+@keyframes jump-arm-bottom {
+    0% {
+        transform: rotateZ(20deg);
+    }
+
+    50% {
+        transform: rotateZ(30deg);
+    }
+
+    70% {
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes jump-footer {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    50% {
+        transform: rotateZ(0deg);
+    }
+
+    70% {
+        transform: rotateZ(-40deg);
+    }
+}
