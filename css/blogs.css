@@ -1,0 +1,46 @@
+/* Center all on mobile */
+@media only screen and (max-width: 800px) {
+  .article {
+    text-align: center !important;
+  }
+
+  .meta {
+    text-align: center;
+    display: block !important;
+  }
+}
+
+.article {
+  margin: 6%;
+  padding: 2%;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.article a {
+  display: inline-block;
+  color: black;
+}
+
+.article i {
+  text-decoration: none !important;
+}
+
+.meta {
+  margin: 20px 0;
+  display: flex;
+}
+
+.meta p {
+  font-size: 18px;
+  margin-left: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.meta-author-img {
+  border-radius: 50%;
+  background-color: #00b3fb;
+  width: 50px;
+}
