@@ -1,0 +1,23 @@
+.navbar {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.logo-img {
+  height: 6vh;
+}
+
+.navbar-brand {
+  font-size: 30px;
+  font-weight: 700;
+  background: linear-gradient(
+    90deg,
+    rgba(250, 127, 0, 1) 0%,
+    rgba(90, 191, 143, 1) 30%,
+    rgba(29, 205, 253, 1) 56%,
+    rgba(255, 66, 214, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
