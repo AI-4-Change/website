@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/img/hhsrt-128x108-3.png"
+      type="image/x-icon"
+    />
+
+    <meta
+      name="description"
+      content="AI 4 Change is a platform for students who want to practice AI through small projects and get tutoring regarding any topics related to AI."
+    />
+    <meta name="keywords" content="Hackathon Code Coding Programming" />
+    <meta name="author" content="AI 4 Change" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="assets/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#2d89ef" />
+    <meta
+      name="msapplication-config"
+      content="assets/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="css/admin.css" />
+
+    <!-- Bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <!-- FontAwsome -->
+    <script
+      src="https://kit.fontawesome.com/d2f0c9369f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>AI 4 Change</title>
+
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div include-html="include/navbar.html"></div>
+
+    <div id="login-modal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <form id="login_form" action="">
+          <h1>Login as admin</h1>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              value="admin@ai4change.com"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" />
+            <div id="passwordError" class="form-text text-danger"></div>
+          </div>
+          <button class="btn btn-outline-dark" type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="alert alert-success hidden" id="success" role="alert">
+      Successfully created a new post. View it
+      <a href="blogs.html" class="alert-link">here</a>.
+    </div>
+    <div class="alert alert-danger hidden" id="error" role="alert">
+      Something went wrong... Try again by refreshing the page
+    </div>
+
+    <form id="blog-form" action="">
+      <h2>Create new blog post</h2>
+
+      <div class="mb-3">
+        <label for="post-title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="post-title" />
+      </div>
+
+      <div class="mb-3">
+        <label for="post-desc" class="form-label">Short Description</label>
+        <textarea type="text" class="form-control" id="post-desc"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="author">Author</label>
+        <select class="form-select" id="author">
+          <option value="AI4Change Team" selected>AI4Change Team</option>
+          <option value="Akshat Adsule">Akshat Adsule</option>
+          <option value="Harikrishna Kommineni">Harikrishna Kommineni</option>
+          <option value="Parinita Kadamby">Parinita Kadamby</option>
+          <option value="Nicholas Noland">Nicholas Noland</option>
+          <option value="Madi Lloyd">Madi Lloyd</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="post-link" class="form-label">Link to article</label>
+        <input type="url" class="form-control" id="post-link" />
+      </div>
+
+      <button type="submit" class="btn btn-outline-dark">Create</button>
+    </form>
+
+    <div include-html="include/footer.html"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+    <script src="js/firebase_init.js"></script>
+    <script src="js/create_blog.js"></script>
+    <script src="js/include.js"></script>
+    <script>
+      includeHTML();
+    </script>
+  </body>
+</html>
