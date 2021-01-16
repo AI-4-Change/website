@@ -29,3 +29,5 @@ function includeHTML() {
     }
   }
 }
+
+includeHTML()
