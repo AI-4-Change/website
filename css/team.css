@@ -3,19 +3,22 @@
 }
 
 .subteam {
-  margin: 4% 0;
+  margin: 0% 0;
+  text-align: center !important;
 }
 
 .title {
-  font-size: 48px;
-  font-weight: 800;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 50px;
 }
 
 .flip-card {
   margin: auto;
   background-color: transparent;
-  width: 450px;
-  height: 450px;
+  width: 500px;
+  height: 500px;
   perspective: 1000px;
   display: inline-block;
   margin: 1%;
@@ -49,6 +52,11 @@
   color: black;
 }
 
+.flip-card-front img {
+  height: 100%;
+  width: 100%;
+}
+
 .flip-card-back {
   width: %100;
   display: flex;
@@ -57,7 +65,7 @@
   justify-content: center;
   align-items: center;
   padding: 6%;
-  background-color: rgb(20, 20, 20);
+  background-color: #00b3fb;
   color: white;
   transform: rotateY(180deg);
 }

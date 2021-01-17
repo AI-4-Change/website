@@ -8,3 +8,15 @@
   font-size: 2.5rem;
   color: #00b3fb;
 }
+
+.btn {
+  font-size: 1.25rem;
+}
+
+.fa,
+.fab {
+  font-size: 64px;
+  margin: 5%;
+  color: #00b3fb;
+  text-decoration: none !important;
+}

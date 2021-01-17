@@ -9,7 +9,7 @@
   align-items: center;
 }
 
-hr {
+.hr {
   margin: auto;
 }
 .about-desc {
@@ -26,7 +26,7 @@ hr {
     padding-left: 10%;
     text-align: left;
   }
-  hr {
+  .hr {
     margin: 0;
   }
   .about-desc {
@@ -36,7 +36,7 @@ hr {
   }
 }
 
-hr {
+.hr {
   width: 35%;
 }
 
