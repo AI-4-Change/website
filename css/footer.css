@@ -20,3 +20,8 @@
   color: #00b3fb;
   text-decoration: none !important;
 }
+
+
+.footer-socials a {
+	font-size: 48px;
+}
