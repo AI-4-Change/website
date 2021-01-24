@@ -17,8 +17,8 @@
 .flip-card {
   margin: auto;
   background-color: transparent;
-  width: 500px;
-  height: 500px;
+  width: 425px;
+  height: 425px;
   perspective: 1000px;
   display: inline-block;
   margin: 1%;
@@ -58,13 +58,13 @@
 }
 
 .flip-card-back {
-  width: %100;
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 6%;
+  padding: 1%;
   background-color: #00b3fb;
   color: white;
   transform: rotateY(180deg);
