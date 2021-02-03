@@ -39,7 +39,7 @@ db.collection("blogs")
 
       // link
       let post_link = document.createElement("a");
-      post_link.classList = ["btn btn-outline-dark"];
+      post_link.classList = ["btn btn-outline-light"];
       post_link.setAttribute("href", data.link);
       post_link.setAttribute("target", "_blank");
       post_link.innerHTML = `Read Article <i class="fas fa-external-link-alt"></i>`;

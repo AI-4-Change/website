@@ -21,7 +21,11 @@
   text-decoration: none !important;
 }
 
+.fa:hover,
+.fab:hover {
+  color: #00b3fb;
+}
 
 .footer-socials a {
-	font-size: 48px;
+  font-size: 48px;
 }

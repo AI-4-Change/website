@@ -14,13 +14,13 @@
   margin: 6%;
   padding: 2%;
   flex-direction: column;
-  border: 1px solid black;
+  border: 1px solid #fff;
   border-radius: 8px;
 }
 
 .article a {
   display: inline-block;
-  color: black;
+  color: #fff;
 }
 
 .article i {

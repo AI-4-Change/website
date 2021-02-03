@@ -18,6 +18,8 @@
 }
 
 .title {
+  display: inline-block;
+  font-weight: 400 !important;
   font-size: 64px;
 }
 
@@ -56,20 +58,20 @@ h4 {
 }
 
 .wwd {
-  margin-top: 5vh;
+  margin-top: 15vh;
 }
 
 .wwd a {
-  color: black;
+  color: #fff;
   text-decoration: none;
 }
 
 .wwd a:hover {
-  color: black;
+  color: #fff;
 }
 
 .wwd-desc {
-  color: black;
+  color: #fff;
   text-decoration: none;
 }
 
