@@ -52,26 +52,38 @@ h4 {
 }
 
 /* What we do */
+
+.wwd h2 {
+  margin-bottom: 10vh;
+}
+
 .wwd-icon {
-  color: #00b3fb;
+  color: #000;
   font-size: 5rem;
 }
 
+.wwd-icon:hover {
+  color: #fff;
+}
+
 .wwd {
+  background-color: var(--accent);
   margin-top: 15vh;
+  padding: 5%;
+  color: #000;
 }
 
 .wwd a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }
 
 .wwd a:hover {
-  color: #fff;
+  color: #000;
 }
 
 .wwd-desc {
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }
 
@@ -82,7 +94,6 @@ h4 {
 /* Call to action */
 .cta {
   color: white;
-  background-color: #00b3fb;
   padding: 8%;
 }
 

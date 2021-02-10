@@ -48,7 +48,7 @@
 }
 
 .flip-card-front {
-  background-color: #00b3fb;
+  background-color: var(--accent);
   color: black;
 }
 
@@ -65,8 +65,8 @@
   justify-content: center;
   align-items: center;
   padding: 1%;
-  background-color: #00b3fb;
-  color: white;
+  background-color: var(--accent);
+  color: #000;
   transform: rotateY(180deg);
 }
 
@@ -84,11 +84,11 @@
 }
 
 .member-socials i {
-  color: white;
+  color: #000;
   font-size: 50px;
   margin: 4%;
 }
 
 .member-socials i:hover {
-  color: white;
+  color: #212529;
 }
