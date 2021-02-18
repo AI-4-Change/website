@@ -64,7 +64,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 1%;
+  padding: 5%;
   background-color: var(--accent);
   color: #000;
   transform: rotateY(180deg);
