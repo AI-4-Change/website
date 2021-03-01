@@ -1,0 +1,18 @@
+.container {
+  text-align: center;
+  margin: 8%;
+}
+
+.partners {
+  text-align: center;
+}
+
+.partner {
+  width: 60%;
+  margin: 3% auto !important;
+}
+
+.partner-logo {
+  margin-bottom: 3%;
+  width: 80%;
+}
