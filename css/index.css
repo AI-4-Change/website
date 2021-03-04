@@ -117,3 +117,9 @@ canvas {
   vertical-align: bottom;
   z-index: -2;
 }
+
+/* Modal */
+
+.modal-dialog {
+  color: #121212;
+}

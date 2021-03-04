@@ -78,6 +78,54 @@
   </head>
 
   <body>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="modal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">
+              Check out our Spring Program!
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Spring Program is a 2 day event with interactive workshops and
+            networking sessions for students interested in learning about
+            Artificial Intelligence. It will feature a broad range of topics
+            such as Introductory and Advanced Python and applying AI in various
+            fields. Not only will these workshops help students learn and gain
+            practical experience, but they will also allow them to network with
+            other students attending the event.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-dark"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <a type="button" class="btn btn-primary" href="SP.html"
+              >Check it out</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div include-html="include/navbar.html"></div>
 
     <div class="bg">
@@ -95,9 +143,12 @@
               hackathons, AI projects that members can participate in for
               practical experience, and tutoring regarding topics related to AI.
             </p>
-            <a href="team.html" class="btn btn-lg btn-outline-light">
+            <!-- <a href="team.html" class="btn btn-lg btn-outline-light">
               Check out our team
-            </a>
+            </a> -->
+            <a class="btn btn-lg btn-outline-light" href="SP.html"
+              >Check out the Spring Program</a
+            >
           </div>
         </div>
       </section>
@@ -113,7 +164,7 @@
 
         <div class="row">
           <div class="col-sm-4 faqshadow">
-            <a href="#">
+            <a href="">
               <h4 class="display-6 theme-icon">
                 <i class="fas fa-project-diagram wwd-icon"></i>
                 <br /><br />
@@ -128,7 +179,7 @@
           </div>
 
           <div class="col-sm-4 faqshadow">
-            <a href="#">
+            <a href="">
               <h4 class="display-6 theme-icon">
                 <i class="fas fa-podcast wwd-icon"></i>
                 <br /><br />Podcasts
@@ -141,7 +192,7 @@
             </a>
           </div>
           <div class="col-sm-4 faqshadow">
-            <a href="#">
+            <a href="">
               <h4 class="display-6 theme-icon">
                 <i class="fas fa-code wwd-icon"></i>
                 <br /><br />Hackathons
@@ -157,7 +208,7 @@
 
         <div class="row">
           <div class="col-sm-4 faqshadow">
-            <a href="#">
+            <a href="">
               <h4 class="display-6 theme-icon">
                 <i class="fas fa-search wwd-icon"></i>
                 <br /><br />Research Programs
@@ -239,5 +290,15 @@
     </script>
     <script src="js/firebase_init.js"></script>
     <script src="js/include.js"></script>
+
+    <!-- Launch the modal -->
+    <script>
+      var modal = new bootstrap.Modal(document.getElementById("modal"), {
+        background: "static",
+        keyboard: false,
+        focus: true,
+      });
+      modal.show();
+    </script>
   </body>
 </html>
