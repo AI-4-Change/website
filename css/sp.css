@@ -1,0 +1,19 @@
+.main {
+  background-color: var(--accent);
+}
+
+.info-img {
+  width: 100%;
+}
+
+.sp-info {
+  margin: 6%;
+}
+
+.sp-info div {
+  margin: 2% 0;
+}
+
+#eventbrite-widget-modal-trigger-143523924923 {
+  width: 100%;
+}
