@@ -15,4 +15,5 @@
 .partner-logo {
   margin-bottom: 3%;
   width: 80%;
+  height: intrinsic;
 }
