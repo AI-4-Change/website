@@ -10,8 +10,13 @@
   }
 }
 
+.blog-info {
+  margin: 4% 6%;
+  margin-bottom: 0;
+}
+
 .article {
-  margin: 6%;
+  margin: 3% 6%;
   padding: 2%;
   flex-direction: column;
   border: 1px solid #fff;
