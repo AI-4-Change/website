@@ -282,18 +282,18 @@
 
     <!-- Launch the modal -->
     <script>
-      let modal = new bootstrap.Modal(document.getElementById("modal"), {
-        background: "static",
-        keyboard: false,
-        focus: true,
-      });
-      let session_storage = window.sessionStorage;
-      // Check if modal has been showed in this session
-      let modal_showed = session_storage.getItem("modal_showed");
-      if (!modal_showed) {
-        modal.show();
-        session_storage.setItem("modal_showed", true);
-      }
+    //   let modal = new bootstrap.Modal(document.getElementById("modal"), {
+    //    background: "static",
+    //    keyboard: false,
+    //   focus: true,
+    //  });
+    //  let session_storage = window.sessionStorage;
+    //  // Check if modal has been showed in this session
+    //  let modal_showed = session_storage.getItem("modal_showed");
+    //  if (!modal_showed) {
+    //    modal.show();
+    //    session_storage.setItem("modal_showed", true);
+    //  }
     </script>
   </body>
 </html>
