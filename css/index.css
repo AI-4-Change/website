@@ -53,19 +53,6 @@ h4 {
 
 /* What we do */
 
-.wwd h2 {
-  margin-bottom: 10vh;
-}
-
-.wwd-icon {
-  color: #000;
-  font-size: 5rem;
-}
-
-.wwd-icon:hover {
-  color: #fff;
-}
-
 .wwd {
   background-color: var(--accent);
   margin-top: 15vh;
@@ -73,18 +60,30 @@ h4 {
   color: #000;
 }
 
-.wwd a {
-  color: #000;
-  text-decoration: none;
+.wwd-item-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.wwd a:hover {
-  color: #000;
+.wwd-item {
+  flex: 1 0 calc(250px);
+  margin: 10px;
+  padding: 10px;
+  height: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #121212;
+  color: white;
+  border-radius: 20px;
 }
 
-.wwd-desc {
-  color: #000;
-  text-decoration: none;
+.wwd-icon {
+  font-size: 5rem;
+  margin: 20px 0;
 }
 
 .row {
