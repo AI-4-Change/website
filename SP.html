@@ -75,97 +75,104 @@
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
+
+    <!-- LeafletJS css -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+
+    <!-- LeafletJS JS -->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
   </head>
   <body>
     <div include-html="include/navbar.html"></div>
 
-    <div class="cover img-container">
-      <img
-        src="assets/spring_program.png"
-        alt="Spring Program Info"
-        class="info-img"
-      />
-    </div>
-
-    <div class="sp-info">
-      <h1 class="text-center">FAQ</h1>
-      <div class="sp-question-answer">
-        <h2 class="sp-question">What is it?</h2>
-        <p class="sp-answer">
-          Spring Program is a 2 day event with interactive workshops and
+    <main>
+      <div class="header">
+        <h1 class="title gradient-text">Spring Program</h1>
+        <p class="desc">
+          Spring Program was a 2 day event with interactive workshops and
           networking sessions for students interested in learning about
-          Artificial Intelligence. It will feature a broad range of topics such
-          as Introductory and Advanced Python and applying AI in various fields.
-          Not only will these workshops help students learn and gain practical
-          experience, but they will also allow them to network with other
+          Artificial Intelligence. The event featured a broad range of topics
+          such as Introductory and Advanced Python and applying AI in various
+          fields. Not only did these workshops help students learn and gain
+          practical experience, but they also allowed them to network with other
           students attending the event.
         </p>
       </div>
 
-      <div class="sp-question-answer">
-        <h2 class="sp-question">Who is involved</h2>
-        <p class="sp-answer">
-          AI 4 Change has brough in mentors from all around the world
-          (California, Arizona, New York, UK, Turkey, India) who will be sharing
-          their knowledge and experience to help students get started in AI.
+      <div class="info">
+        <h2>Topics Covered</h2>
+        <h6>
+          The Spring Program Covered many topics related to AI and computer
+          science.
+        </h6>
+        <p>Some topics include:</p>
+        <ul>
+          <li>Introduction to Linear Regression</li>
+          <li>Paradigms of AI</li>
+          <li>Introduction to K-Nearest Neighbors</li>
+          <li>Introduction to Support Vector Machines</li>
+          <li>Intro to NLP</li>
+          <li>Introduction to Python</li>
+          <li>Advanced Python</li>
+        </ul>
+
+        <p>
+          Checkout the slideshow below to see topics covered in the Spring
+          Program
         </p>
-      </div>
 
-      <div class="sp-question-answer">
-        <h2 class="sp-question">Can I join?</h2>
-        <p class="sp-answer">
-          Absolutely! There are no required skills and beginners are welcome!
-        </p>
-      </div>
-
-      <div class="sp-question-answer">
-        <h2 class="sp-question">How can I join?</h2>
-        <p class="sp-answer">You can join the event for free below.</p>
-      </div>
-
-      <noscript>
-        <a
-          href="https://www.eventbrite.com/e/ai-4-change-spring-program-tickets-143523924923?aff=ebdssbonlinesearch"
-          class="btn btn-outline-light"
-          >Signup with eventbrite</a
+        <div
+          class="carousel carousel-dark slide"
+          data-bs-ride="carousel"
+          id="carousel"
         >
-      </noscript>
-
-      <div class="sp-eventbrite">
-        <button id="eventbrite-widget-modal-trigger-143523924923" type="button">
-          Buy Tickets
-          <div id="eventbrite-widget-container-143523924923"></div>
-
-          <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
-
-          <script type="text/javascript">
-            var exampleCallback = function () {
-              console.log("Order complete!");
-            };
-
-            window.EBWidgets.createWidget({
-              // Required
-              widgetType: "checkout",
-              eventId: "143523924923",
-              iframeContainerId: "eventbrite-widget-container-143523924923",
-
-              // Optional
-              iframeContainerHeight: 600, // Widget height in pixels. Defaults to a minimum of 425px if not provided
-              onOrderComplete: exampleCallback, // Method called when an order has successfully completed
-            });
-          </script>
-        </button>
+          <div class="carousel-inner" id="carousel-inner"></div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </div>
-    </div>
+
+      <div class="reach">
+        <h2>Reach</h2>
+        <h6>
+          The Spring Program reached students from accross the world in places
+          such as India, Brazil, and Indonasia.
+        </h6>
+        <p>
+          Checkout the map below to see where from where people signed up for
+          the Spring Program
+        </p>
+        <div id="reach-map"></div>
+      </div>
+    </main>
 
     <!-- Footer and scripts -->
     <div include-html="include/footer.html"></div>
-
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
-    <script src="js/firebase_init.js"></script>
-    <script src="js/track_sp.js"></script>
 
     <!-- Bootsrap js -->
     <script
@@ -173,6 +180,8 @@
       integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
       crossorigin="anonymous"
     ></script>
+    <script src="js/load_carousel.js"></script>
+    <script src="js/load_map.js"></script>
     <script src="js/include.js"></script>
   </body>
 </html>

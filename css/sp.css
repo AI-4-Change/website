@@ -1,26 +1,43 @@
-.main {
+.header {
+  padding: 38vh 5vw;
+  margin: auto auto;
+  text-align: center;
+  background-color: var(--bg);
+}
+
+.title {
+  font-size: 48px;
+}
+
+main {
+  text-align: center;
+}
+
+#reach-map {
+  height: 80vh;
+}
+
+.info {
+  padding: 5% 10%;
   background-color: var(--accent);
 }
 
-.info-img {
-  width: 100%;
+.reach {
+  padding: 5% 10%;
+  background-color: var(--bg);
 }
 
-.sp-info {
-  margin: 6%;
-}
-
-.sp-info div {
-  margin: 2% 0;
-}
-
-.img-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--accent);
-}
-
-#eventbrite-widget-modal-trigger-143523924923 {
-  width: 100%;
+@media only screen and (min-width: 992px) {
+  .header {
+    padding-left: 10%;
+    padding-right: 50%;
+    margin: 0;
+    text-align: left;
+  }
+  .hr {
+    margin: 0;
+  }
+  main {
+    text-align: left;
+  }
 }
