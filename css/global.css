@@ -2,7 +2,9 @@
 
 :root {
   --accent: #0ebaff;
+  --bg: #121212;
 }
+
 body {
   font-family: "Roboto", sans-serif !important;
   background-color: #121212;
@@ -20,6 +22,8 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 h1 {
@@ -32,4 +36,9 @@ h2 {
 
 .cover {
   height: 90vh;
+}
+
+ul {
+  padding-left: 0;
+  list-style-position: inside;
 }
