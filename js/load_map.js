@@ -16,7 +16,10 @@ const locations = [
   { name: "Netherlands", location: [52.132633, 5.291266] },
 ];
 
-var map = L.map("reach-map", { scrollWheelZoom: false }).setView([0, 0], 2.5);
+var map = L.map("reach-map", {
+  scrollWheelZoom: false,
+  worldCopyJump: true,
+}).setView([0, 0], 2.5);
 L.tileLayer(
   `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${atob(
     API_TOKEN
