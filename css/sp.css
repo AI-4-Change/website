@@ -18,7 +18,7 @@ main {
 }
 
 .info {
-  padding: 5% 5%;
+  padding: 5% 10%;
   background-color: var(--accent);
   display: flex;
   flex-direction: row;
