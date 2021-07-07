@@ -7,6 +7,7 @@
 
 .title {
   font-size: 48px;
+  margin: auto;
 }
 
 main {
@@ -21,13 +22,13 @@ main {
   padding: 5% 10%;
   background-color: var(--accent);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
 
 .carousel {
-  width: 50%;
+  width: 100%;
 }
 
 .reach {
@@ -42,10 +43,19 @@ main {
     margin: 0;
     text-align: left;
   }
+  .title {
+    margin: 0;
+  }
   .hr {
     margin: 0;
   }
   main {
     text-align: left;
+  }
+  .info {
+    flex-direction: row;
+  }
+  .carousel {
+    width: 50%;
   }
 }
