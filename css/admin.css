@@ -14,10 +14,6 @@
   background-color: rgba(161, 161, 161, 0.4); /* Black w/ opacity */
 }
 
-.hidden {
-  display: none;
-}
-
 /* Modal Content */
 .modal-content {
   background-color: #121212 !important;

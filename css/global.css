@@ -26,16 +26,12 @@ body {
   width: fit-content;
 }
 
-h1 {
-  font-size: 36px;
-}
-
-h2 {
-  font-size: 30px;
-}
-
 .cover {
   height: 90vh;
+}
+
+.hidden {
+  display: none;
 }
 
 ul {
