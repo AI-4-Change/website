@@ -8,9 +8,8 @@ describe('SpringprogramComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SpringprogramComponent ]
-    })
-    .compileComponents();
+      declarations: [SpringprogramComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
