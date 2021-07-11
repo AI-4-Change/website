@@ -1,0 +1,23 @@
+<main>
+  <h2>Manage Blogs</h2>
+  <a [routerLink]="['/admin/blog/new']" class="btn btn-outline-light"
+    >New Post</a
+  >
+  <div class="blog" *ngFor="let blog of snapshots">
+    <h3>{{ blog.payload.doc.data().title }}</h3>
+
+    <button
+      class="btn btn-outline-light"
+      (click)="editBlog(blog.payload.doc.data().id)"
+    >
+      Edit
+    </button>
+
+    <button
+      class="btn btn-outline-danger"
+      (click)="deleteBlog(blog.payload.doc.data().id)"
+    >
+      Delete
+    </button>
+  </div>
+</main>

@@ -1,0 +1,23 @@
+<main>
+  <h2>Manage Podcasts</h2>
+  <a [routerLink]="['/admin/podcast/new']" class="btn btn-outline-light"
+    >New Post</a
+  >
+  <div class="episode" *ngFor="let episode of snapshots">
+    <h3>{{ episode.payload.doc.data().title }}</h3>
+
+    <button
+      class="btn btn-outline-light"
+      (click)="editPodcast(episode.payload.doc.data().id)"
+    >
+      Edit
+    </button>
+
+    <button
+      class="btn btn-outline-danger"
+      (click)="deletePodcast(episode.payload.doc.data().id)"
+    >
+      Delete
+    </button>
+  </div>
+</main>

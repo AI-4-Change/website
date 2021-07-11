@@ -1,0 +1,92 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['/']"
+      ><img class="logo-img" src="assets/logo.png" alt="" height="50px" />
+      <span class="gradient-text"> AI 4 Change</span></a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse ml-auto flex-row-reverse"
+      id="navbarSupportedContent"
+    >
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a [routerLink]="['/blog']" routerLinkActive="active" class="nav-link"
+            >Blog</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            [routerLink]="['/partners']"
+            routerLinkActive="active"
+            class="nav-link"
+            >Our Partners</a
+          >
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/team']" routerLinkActive="active" class="nav-link"
+            >Our Team</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            [routerLink]="['/podcast']"
+            routerLinkActive="active"
+            class="nav-link"
+            >Podcast</a
+          >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Programs
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a
+                [routerLink]="['/SP']"
+                routerLinkActive="active"
+                class="dropdown-item"
+                >Spring Program</a
+              >
+            </li>
+          </ul>
+        </li>
+        <form class="d-flex">
+          <a
+            class="btn btn-outline-info"
+            href="https://mailchi.mp/4af58345b9ea/ai4changeblog"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Join</a
+          >
+        </form>
+        <li
+          class="nav-item"
+          *ngIf="shouldShowLogoutButton"
+          style="margin-left: 10px"
+        >
+          <button (click)="onLogout()" class="btn btn-outline-light">
+            Logout
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

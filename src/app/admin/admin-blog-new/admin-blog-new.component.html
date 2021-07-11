@@ -1,0 +1,59 @@
+<form [formGroup]="createForm" (ngSubmit)="onFormSubmit()">
+  <div class="form-group">
+    <label for="title">Title: </label>
+    <input
+      id="title"
+      type="text"
+      formControlName="title"
+      class="form-control bg-transparent"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="desc">Description: </label>
+    <textarea
+      id="desc"
+      type="text"
+      formControlName="desc"
+      class="form-control bg-transparent"
+      required
+    ></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="author">Author</label>
+    <select
+      class="form-select bg-transparent"
+      id="author"
+      formControlName="author"
+    >
+      <!-- <option disabled>Choose Author</option> -->
+      <option value="AI4Change Team" selected>AI4Change Team</option>
+      <option value="Akshat Adsule">Akshat Adsule</option>
+      <option value="Laksh Bhambhani">Laksh Bhambhani</option>
+      <option value="Harikrishna Kommineni">Harikrishna Kommineni</option>
+      <option value="Parinita Kadamby">Parinita Kadamby</option>
+      <option value="Madi Lloyd">Madi Lloyd</option>
+      <option value="Sushant Gupta">Sushant Gupta</option>
+      <option value="Debi Ahotov">Debi Ahotov</option>
+      <option value="Avishi Gupta">Avishi Gupta</option>
+      <option value="Ethan Kidron">Ethan Kidron</option>
+      <option value="Faiyaz Hasan">Faiyaz Hasan</option>
+      <option value="Vidhya Kalimani">Vidhya Kalimani</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="desc">Link: </label>
+    <input
+      id="link"
+      type="url"
+      formControlName="link"
+      class="form-control bg-transparent"
+      required
+    />
+  </div>
+
+  <button type="submit" class="btn btn-outline-light">Publish</button>
+</form>

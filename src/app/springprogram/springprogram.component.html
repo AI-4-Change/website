@@ -1,0 +1,92 @@
+<!-- LeafletJS css -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""
+/>
+
+<main>
+  <div class="header">
+    <h1 class="title gradient-text">Spring Program</h1>
+    <p class="desc">
+      Spring Program was a 2 day event with interactive workshops and networking
+      sessions for students interested in learning about Artificial
+      Intelligence. The event featured a broad range of topics such as
+      Introductory and Advanced Python and applying AI in various fields. Not
+      only did these workshops help students learn and gain practical
+      experience, but they also allowed them to network with other students
+      attending the event.
+    </p>
+  </div>
+
+  <div class="info">
+    <div class="topics">
+      <h2>Topics Covered</h2>
+      <h6>
+        The Spring Program Covered many topics related to AI and computer
+        science.
+      </h6>
+      <p>Some topics include:</p>
+      <ul>
+        <li>Introduction to Linear Regression</li>
+        <li>Paradigms of AI</li>
+        <li>Introduction to K-Nearest Neighbors</li>
+        <li>Introduction to Support Vector Machines</li>
+        <li>Intro to NLP</li>
+        <li>Introduction to Python</li>
+        <li>Advanced Python</li>
+      </ul>
+    </div>
+
+    <div
+      class="carousel carousel-dark slide"
+      data-bs-ride="carousel"
+      id="carousel"
+    >
+      <div class="carousel-inner" id="carousel-inner">
+        <div
+          class="carousel-item{{ idx === 1 ? ' active' : '' }}"
+          *ngFor="let idx of images"
+        >
+          <img
+            src="assets/spring_program/{{ idx }}.PNG"
+            class="d-block w-100"
+            alt="Spring Program Image"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="reach">
+    <h2>Reach</h2>
+    <h6>
+      The Spring Program reached students from accross the world in places such
+      as India, Brazil, and Indonasia.
+    </h6>
+    <p>
+      Checkout the map below to see where from where people signed up for the
+      Spring Program
+    </p>
+    <div id="reach-map"></div>
+  </div>
+</main>

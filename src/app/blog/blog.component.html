@@ -1,0 +1,31 @@
+<div class="blog-info">
+  <h1>Blog</h1>
+  <p>
+    Learn more about AI with insightful posts on various AI concepts and
+    research and tutorials for projects!
+  </p>
+  <a
+    href="https://docs.google.com/forms/d/e/1FAIpQLSda71pJn1m_jKbnG6B9mePeEQ5JB37HUJ-dztAXf6h7UKnB9Q/viewform"
+    class="btn btn-outline-light"
+    >Interested in adding your blog here?</a
+  >
+</div>
+
+<section id="articles">
+  <div class="article" *ngFor="let post of posts | async">
+    <h2>{{ post.title }}</h2>
+    <div class="meta">
+      <img
+        src="assets/team/{{ post.author.split(' ')[0].toLowerCase() }}.png"
+        class="meta-author-img"
+      />
+      <p>{{ post.author }}</p>
+    </div>
+    <p>
+      {{ post.desc }}
+    </p>
+    <a class="btn btn-outline-light" href="{{ post.link }}" target="_blank"
+      >Read Article <i class="fas fa-external-link-alt" aria-hidden="true"></i
+    ></a>
+  </div>
+</section>
