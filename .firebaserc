@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ai4change-hhs": {
+      "hosting": {
+        "website-ng": [
+          "ai4change-hhs"
+        ]
+      }
+    }
+  }
+}
