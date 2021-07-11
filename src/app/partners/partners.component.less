@@ -1,22 +1,29 @@
-.container {
+.main {
   text-align: center;
   margin: 8%;
+  display: flex;
 }
 
 .partners {
   text-align: center;
+  width: 50%;
+  // margin: 3% auto !important;
 }
 
 .partner {
-  width: 60%;
-  margin: 3% auto !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .partner-logo {
   margin-bottom: 3%;
   width: 80%;
-  height: intrinsic;
+}
+
+@media only screen and (max-width: 992px) {
+  .main {
+    flex-direction: column;
+  }
+  .partners {
+    width: 100%;
+    margin: 10% 0;
+  }
 }
