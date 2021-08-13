@@ -77,8 +77,12 @@ h4 {
 }
 
 .wwd-icon {
-  font-size: 5rem;
+  font-size: 8rem;
   margin: 20px 0;
+}
+
+.wwd-item-desc {
+  color: var(--bg);
 }
 
 .row {
@@ -93,6 +97,62 @@ h4 {
 
 .cta p {
   font-size: 24px;
+}
+
+/* wwd animation */
+.wwd-animation-icon {
+  animation-iteration-count: 1;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  animation-name: wwd-icon;
+}
+
+.wwd-animation-title {
+  animation-iteration-count: 1;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  animation-name: wwd-title;
+}
+
+.wwd-animation-text {
+  animation-iteration-count: 1;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  animation-name: wwd-text;
+  // display: none;
+}
+
+@keyframes wwd-icon {
+  from {
+    font-size: 8rem;
+  }
+  to {
+    font-size: 5rem;
+  }
+}
+
+@keyframes wwd-title {
+  from {
+    font-size: 32px;
+  }
+  to {
+    font-size: 1.75rem;
+  }
+}
+
+@keyframes wwd-text {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+    color: white;
+  }
 }
 
 /*Particle JS*/

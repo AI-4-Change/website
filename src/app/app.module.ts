@@ -11,6 +11,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
 
 import { NgParticlesModule } from 'ng-particles';
+import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -57,6 +58,7 @@ import { AdminPodcastNewComponent } from './admin/admin-podcast-new/admin-podcas
     AngularFireAuthModule,
     AngularFireAuthGuardModule,
     NgParticlesModule,
+    AnimateOnScrollModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

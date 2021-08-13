@@ -23,6 +23,7 @@
     "firebase": "^7.0 || ^8.0",
     "leaflet": "^1.7.1",
     "ng-particles": "^2.13.4",
+    "ng2-animate-on-scroll": "^2.2.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "tsparticles": "^1.30.4",

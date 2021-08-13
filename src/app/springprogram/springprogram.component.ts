@@ -17,7 +17,7 @@ export class SpringprogramComponent implements AfterViewInit {
     .fill(0)
     .map((_, idx) => idx + 1);
 
-  private initMap() {
+  private initMap(): void {
     this.map = new L.Map('reach-map', {
       scrollWheelZoom: false,
       worldCopyJump: true,
@@ -37,7 +37,7 @@ export class SpringprogramComponent implements AfterViewInit {
     ).addTo(this.map);
   }
 
-  private addLocation(location: ReachLocation) {
+  private addLocation(location: ReachLocation): void {
     L.marker(location.location, {
       title: location.name,
       alt: location.name,
@@ -50,7 +50,7 @@ export class SpringprogramComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.initMap();
-    for (let location of REACH_LOCATIONS) {
+    for (const location of REACH_LOCATIONS) {
       this.addLocation(location);
     }
   }

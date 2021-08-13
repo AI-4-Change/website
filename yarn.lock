@@ -7341,6 +7341,13 @@ ng-particles@^2.13.4:
   dependencies:
     tslib "^2.2.0"
 
+ng2-animate-on-scroll@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/ng2-animate-on-scroll/-/ng2-animate-on-scroll-2.2.1.tgz#012d4b9eac4db6a88deebe503711cb7419884441"
+  integrity sha512-/bzlRNGeGforVOW4j2ZlkN8iqGOxd6Gdm6hJlJlKZK1sW4T880FRsREbzTqtFNM4i1eMyVQDeswpBphFv0txdg==
+  dependencies:
+    tslib "^2.0.0"
+
 nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
