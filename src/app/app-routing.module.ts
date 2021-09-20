@@ -66,6 +66,7 @@ const routes: Routes = [
   { path: 'SP', component: SpringprogramComponent },
   { path: 'team', component: TeamComponent },
   { path: '', component: IndexComponent },
+  {path: '**', redirectTo: '/'},
 ];
 
 @NgModule({
